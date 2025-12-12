@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+echo "RJX"
+
+# # This script installs essential packages after a fresh Arch installation.
+#
+# set -euo pipefail
+#
+# # Global variables
+# readonly LOG_FILE="/tmp/yadm-bootstrap.log"
+# readonly PACKAGE_GROUPS=(
+#   "archlinuxcn-keyring"                                                                                             # AUR keyring
+#   "git alacritty openssh"                                                                                               # Core tools
+#   "niri xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal-kde  egl-wayland" # Wayland compositor & portal
+#   "pipewire pipewire-pulse pipewire-jack"                                                                           # Audio server
+#   "alsa-utils alsa-firmware alsa-ucm-conf sof-firmware"                                                             # Audio firmware
+#   "firefox"                                                                                                         # Web browser
+#   "adobe-source-han-serif-cn-fonts wqy-zenhei"                                                                      # Chinese fonts
+#   "noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra"                                                     # Noto fonts & emoji
+#   "ntfs-3g"                                                                                                         # NTFS filesystem support
+#   "fcitx5-im fcitx5-chinese-addons fcitx5-material-color"                                                           # Fcitx5 input method
+# )
+#
+# # Log messages to both stdout and log file
+# log() {
+#   echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
+# }
+#
+# # Check if command exists
+# command_exists() {
+#   command -v "$1" &>/dev/null
+# }
+#
+# # Install package group with error handling
+# install_packages() {
+#   local packages="$1"
+#   local name="$2"
+#
+#   log "Installing $name: $packages"
+#   if sudo pacman --noconfirm -S $packages; then
+#     log "✓ Successfully installed $name"
+#   else
+#     log "✗ Failed to install $name. Check $LOG_FILE for details."
+#     return 1
+#   fi
+# }
+#
+# # Main execution
+# main() {
+#   log "Starting yadm bootstrap process..."
+#
+#   # Validate environment
+#   if [[ -z "${HOME:-}" ]]; then
+#     echo "Error: HOME environment variable is not set." >&2
+#     exit 1
+#   fi
+#
+#   if ! command_exists pacman; then
+#     echo "Error: pacman command not found. Is this an Arch Linux system?" >&2
+#     exit 1
+#   fi
+#
+#   if ! command_exists yadm; then
+#     echo "Warning: yadm command not found. Proceeding anyway..." >&2
+#   fi
+#
+#   cd "$HOME"
+#   log "Changed to home directory: $HOME"
+#
+#   # Update package database
+#   log "Updating package database..."
+#   if ! sudo pacman -Sy --noconfirm; then
+#     log "⚠ Warning: Failed to update package database. Continuing with cached data..."
+#   fi
+#
+#   # Install each package group
+#   for i in "${!PACKAGE_GROUPS[@]}"; do
+#     case $i in
+#     0) install_packages "${PACKAGE_GROUPS[i]}" "core tools" ;;
+#     1) install_packages "${PACKAGE_GROUPS[i]}" "wayland components" ;;
+#     2) install_packages "${PACKAGE_GROUPS[i]}" "firefox browser" ;;
+#     3) install_packages "${PACKAGE_GROUPS[i]}" "chinese fonts" ;;
+#     4) install_packages "${PACKAGE_GROUPS[i]}" "noto fonts" ;;
+#     5) install_packages "${PACKAGE_GROUPS[i]}" "archlinuxcn keyring" ;;
+#     6) install_packages "${PACKAGE_GROUPS[i]}" "audio firmware" ;;
+#     7) install_packages "${PACKAGE_GROUPS[i]}" "pipewire audio" ;;
+#     8) install_packages "${PACKAGE_GROUPS[i]}" "ntfs support" ;;
+#     9) install_packages "${PACKAGE_GROUPS[i]}" "fcitx5 input" ;;
+#     esac || true # Continue on failure of individual groups
+#   done
+#
+#   log "Bootstrap process completed. Log saved to $LOG_FILE"
+# }
+#
+# # Run main function
+# main "$@"
