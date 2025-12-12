@@ -1,6 +1,27 @@
 #!/usr/bin/env bash
 
-echo "RJX"
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+BLUE="\033[0;34m"
+YELLOW="\033[0;33m"
+CYAN="\033[36m"
+MAGENTA="\033[35m"
+BOLD="\033[1m"
+RESET="\033[0m"
+
+color_echo() {
+  local color="$1"
+  shift
+  echo -e "${!color}$*${RESET}"
+}
+
+color_echo RED "RicardoRyn"
+color_echo GREEN "RicardoRyn"
+color_echo BLUE "RicardoRyn"
+color_echo YELLOW "RicardoRyn"
+color_echo CYAN "RicardoRyn"
+color_echo MAGENTA "RicardoRyn"
+color_echo BOLD "RicardoRyn"
 
 # # This script installs essential packages after a fresh Arch installation.
 #
