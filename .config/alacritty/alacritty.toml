@@ -13,7 +13,7 @@ bold_italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
 
 [window]
 decorations = "None"
-padding = { x = 12, y = 12 }
+dynamic_padding = true
 opacity = 1.0
 
 [scrolling]
