@@ -31,3 +31,6 @@ oplog_command = ["op", "show", "$operation_id", "--color", "always"]
 
 [ui.tracer]
 enabled = true
+
+[keys]
+force_apply = ["alt+enter", "ctrl+s"]
