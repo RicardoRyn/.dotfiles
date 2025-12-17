@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# This script installs essential packages after a fresh Arch installation.
+set -euo pipefail
+
+
 RED="\033[0;31m"
 GREEN="\033[0;32m"
 BLUE="\033[0;34m"
@@ -23,10 +27,6 @@ color_echo CYAN "RicardoRyn"
 color_echo MAGENTA "RicardoRyn"
 color_echo BOLD "RicardoRyn"
 
-# # This script installs essential packages after a fresh Arch installation.
-#
-# set -euo pipefail
-#
 # # Global variables
 # readonly LOG_FILE="/tmp/yadm-bootstrap.log"
 # readonly PACKAGE_GROUPS=(
