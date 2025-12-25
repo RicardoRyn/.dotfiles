@@ -425,10 +425,10 @@ binds {
     Mod+Ctrl+C { center-visible-columns; }
 
     // === Manual Sizing ===
-    Mod+U { set-column-width "-10%"; }
-    Mod+P { set-column-width "+10%"; }
-    Mod+O { set-window-height "-10%"; }
-    Mod+I { set-window-height "+10%"; }
+    Mod+Y { set-column-width "-10%"; }
+    Mod+O { set-column-width "+10%"; }
+    Mod+I { set-window-height "-10%"; }
+    Mod+U { set-window-height "+10%"; }
 
     // === Screenshots ===
     XF86Launch1 { screenshot; }
