@@ -9,6 +9,7 @@ alias lj = lazyjj -r "all()"
 alias ju = jjui -r "all()"
 alias jf = jj git fetch
 alias jp = jj git push
+alias top = btop
 
 $env.config = {
   show_banner: false,
