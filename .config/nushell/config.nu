@@ -12,6 +12,9 @@ alias jp = jj git push
 alias top = btop
 
 $env.config = {
+  hooks: {
+    display_output: { table --icons }
+  }
   show_banner: false,
   edit_mode: vi,
   cursor_shape: {

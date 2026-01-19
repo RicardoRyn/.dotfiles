@@ -226,7 +226,7 @@ window-rule {
     match app-id=r#"^galculator$"#
     match app-id=r#"^blueman-manager$"#
     match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^steam$"#
+    // match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
 }
@@ -475,3 +475,5 @@ window-rule {
     default-column-width { fixed 200; }
     default-window-height { fixed 70; }
 }
+
+include "dms/cursor.kdl"
