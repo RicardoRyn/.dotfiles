@@ -7,13 +7,12 @@ email = "ricardoryn1317@gmail.com"
 [ui]
 default-command = "log"
 editor = "nvim"
-pager = ["delta", "--pager", "less -FRX"]
-diff-formatter = ":git"
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
 diff-instructions = false
 merge-editor = "vimdiff"
 
 [git]
+fetch = ["origin", "upstream"]
 private-commits = '''description(glob:'WIP:*')'''
 
 [lazyjj]
@@ -34,3 +33,8 @@ merge-args = ["-f", "-d", "$output", "-M",
     "-c", "wincmd J", "-c", "set modifiable",
     "-c", "set write"]
 merge-tool-edits-conflict-markers = true
+
+[colors]
+"diff removed token" = { bg = "#eac8d3", underline = false }
+"diff added token" = { bg = "#d0e2d1", underline = false }
+"diff context" = { dim = true }
