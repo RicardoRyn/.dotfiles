@@ -1,15 +1,9 @@
 alias ll = ls -l
 alias la = ls -a
 alias lla = ls -al
-alias vim = nvim
 alias vide = neovide
-alias y = yazi
-alias lg = lazygit
-alias lj = lazyjj -r "all()"
-alias ju = jjui -r "all()"
 alias jf = jj git fetch
 alias jp = jj git push
-alias top = btop
 
 $env.config = {
   hooks: {
@@ -46,5 +40,6 @@ $env.EDITOR = "nvim"
 $env.CONDA_NO_PROMPT = true  # 不显示conda的环境提示，由starship接管
 
 source ~/.zoxide.nu
-# use ~/appdata/roaming/nushell/virtual_environments/nu_conda_2/conda.nu
+use ~/.config/nushell/virtual_environments/nu_conda_2/conda.nu
 use ~/.config/nushell/completions-jj.nu *
+use ~/.config/nushell/utils.nu *

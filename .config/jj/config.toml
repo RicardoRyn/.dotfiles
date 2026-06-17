@@ -9,7 +9,7 @@ default-command = "log"
 editor = "nvim"
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
 diff-instructions = false
-merge-editor = "vimdiff"
+merge-editor = ["nvim", "-c", "MergeEditor $base $left $right $output $path"]
 
 [git]
 fetch = ["origin", "upstream"]
@@ -24,17 +24,9 @@ diff-tool = "delta"
 "format_timestamp(timestamp)" = "timestamp.ago()"
 
 [aliases]
-l = ["log", "-r", "::", "-n", "7"]
-
-[merge-tools.vimdiff]
-program = "nvim"
-merge-args = ["-f", "-d", "$output", "-M",
-    "$left", "$base", "$right",
-    "-c", "wincmd J", "-c", "set modifiable",
-    "-c", "set write"]
-merge-tool-edits-conflict-markers = true
+l = ["log", "-r", "::", "-n", "20"]
 
 [colors]
-"diff removed token" = { bg = "#eac8d3", underline = false }
-"diff added token" = { bg = "#d0e2d1", underline = false }
+"diff removed token" = { bg = "#442726", underline = false }
+"diff added token" = { bg = "#26332c", underline = false }
 "diff context" = { dim = true }

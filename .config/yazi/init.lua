@@ -5,8 +5,7 @@ th.git.untracked_sign = " "
 th.git.ignored_sign = " "
 th.git.deleted_sign = "󰛲 "
 th.git.updated_sign = " "
-require("git"):setup { order = 1500 }
+require("git"):setup({ order = 1500 })
 require("full-border"):setup()
 require("starship"):setup()
--- cloese preview panel when start yazi
 require("toggle-pane"):entry("min-preview")
