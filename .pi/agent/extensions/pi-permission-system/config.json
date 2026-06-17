@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-permission-system/main/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": true,
+  "yoloMode": false,
+  "piInfrastructureReadPaths": ["C:/Users/RicardoRyn/AppData/Local/nvim-data"],
+  "permission": {
+    "*": "ask",
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "read": "allow",
+    "write": "ask",
+    "edit": "ask",
+    "ls": "allow",
+    "cat": "allow",
+    "grep": "allow",
+    "find": "allow",
+    "bash": {
+      "ls *": "allow",
+      "cat *": "allow",
+      "grep *": "allow",
+      "find *": "allow",
+      "git status": "allow",
+      "git diff *": "allow",
+      "git *": "ask",
+      "jj status": "allow",
+      "jj diff *": "allow",
+      "jj *": "ask"
+    },
+    "skill": { "*": "allow" },
+    "external_directory": "ask",
+    "codegraph_status": "allow",
+    "codegraph_search": "allow",
+    "codegraph_context": "allow",
+    "codegraph_node": "allow",
+    "codegraph_explore": "allow",
+    "codegraph_trace": "allow",
+    "codegraph_files": "allow"
+  }
+}

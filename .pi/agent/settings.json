@@ -1,0 +1,20 @@
+{
+  "lastChangelogVersion": "0.79.6",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-pro",
+  "theme": "catppuccin-mocha",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true,
+  "extensions": [
+    "~/.pi/agent/extensions/agentmemory"
+  ],
+  "packages": [
+    "npm:@gotgenes/pi-permission-system",
+    "npm:pi-rewind",
+    "npm:pi-exa",
+    "npm:@plannotator/pi-extension",
+    "npm:@vndv/pi-codegraph@0.1.7",
+    "npm:pi-cache-optimizer"
+  ],
+  "quietStartup": false
+}
